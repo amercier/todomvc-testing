@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/testem ci"
+  },
   "devDependencies": {
     "phantomjs": "^1.9.12",
     "testem": "^0.6.24"
