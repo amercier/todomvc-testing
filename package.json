@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "phantomjs": "^1.9.12",
+    "testem": "^0.6.24"
+  }
+}
