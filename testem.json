@@ -6,5 +6,9 @@
   ],
   "launch_in_dev": [
     "PhantomJS"
+  ],
+  "src_files": [
+    "app/examples/jquery/js/**/*.js",
+    "tests/vanillajs/**"
   ]
 }
