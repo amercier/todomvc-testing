@@ -3,6 +3,7 @@
   "devDependencies": {
     "mocha": "~2.0.1",
     "chai": "~1.10.0",
-    "qunit": "~1.16.0"
+    "qunit": "~1.16.0",
+    "blanket": "~1.1.5"
   }
 }
