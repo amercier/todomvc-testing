@@ -11,6 +11,8 @@
     <!-- Mocha dependencies -->
     <script src="../../bower_components/mocha/mocha.js"></script>
     <script src="../../bower_components/chai/chai.js"></script>
+    <script src="../../bower_components/blanket/dist/qunit/blanket.js"> </script>
+    <script src="../../bower_components/blanket/src/adapters/mocha-blanket.js"></script>
     <script src="/testem.js"></script>
     <script>
       window.assert = chai.assert;
@@ -20,7 +22,7 @@
     </script>
 
     <!-- Source -->
-    <script src="../../app/examples/vanillajs/js/model.js"></script>
+    <script src="../../app/examples/vanillajs/js/model.js" data-cover></script>
 
     <!-- Mocks -->
     <script src="mocks/store.mock.js"></script>

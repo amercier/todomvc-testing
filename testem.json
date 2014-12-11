@@ -1,5 +1,5 @@
 {
-  "framework": "mocha",
+  "framework": "mocha+chai",
   "test_page": "tests/vanillajs/index.html",
   "launch_in_ci": [
     "PhantomJS"
