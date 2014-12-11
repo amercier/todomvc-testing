@@ -1,0 +1,14 @@
+{
+  "framework": "qunit",
+  "test_page": "tests_qunit/vanillajs/index.html",
+  "launch_in_ci": [
+    "PhantomJS"
+  ],
+  "launch_in_dev": [
+    "PhantomJS"
+  ],
+  "src_files": [
+    "app/examples/jquery/js/**/*.js",
+    "tests_qunit/vanillajs/**"
+  ]
+}
