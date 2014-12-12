@@ -16,14 +16,13 @@ Installation
   ```
   git clone https://github.com/amercier/todomvc-testing.git
   cd todomvc-testing
-  git submodule init
-  git submodule update
   ```
 
 2. Install submodules
 
   ```
   git submodule init
+  git submodule update
   ```
 
 3. Install NPM modules
