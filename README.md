@@ -1,7 +1,7 @@
-testem-mocha-sample
-===================
+todomvc-testing
+===============
 
-[![Build Status](http://img.shields.io/travis/amercier/testem-mocha-sample.svg?style=flat-square)](https://travis-ci.org/amercier/testem-mocha-sample)
+[![Build Status](http://img.shields.io/travis/amercier/todomvc-testing.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-testing)
 
 Sample project with unit testing using Testem and Mocha.
 
@@ -12,8 +12,8 @@ Installation
 1. Clone this repo:
 
   ```
-  git clone https://github.com/amercier/testem-mocha-sample.git
-  cd testem-mocha-sample
+  git clone https://github.com/amercier/todomvc-testing.git
+  cd todomvc-testing
   ```
 
 2. Install submodules

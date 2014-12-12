@@ -1,5 +1,5 @@
 {
-  "name": "testem-mocha-sample",
+  "name": "todomvc-testing",
   "devDependencies": {
     "mocha": "~2.0.1",
     "chai": "~1.10.0",
