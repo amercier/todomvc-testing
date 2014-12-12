@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SlideShare Javascript Tests</title>
+    <link rel="stylesheet" href="../../../bower_components/jasmine/lib/jasmine-core/jasmine.css"/>
+  </head>
+  <body>
+    <div id="jasmine"></div>
+
+    <!-- Jasmine dependencies -->
+    <script src="../../../bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+    <script src="../../../bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../../../bower_components/jasmine/lib/jasmine-core/boot.js"></script>
+    <script src="/testem.js"></script>
+
+    <!-- Source -->
+    <script src="../../../app/examples/vanillajs/js/model.js" data-cover></script>
+
+    <!-- Mocks -->
+    <script src="../mocks/store.mock.js"></script>
+
+    <!-- Tests -->
+    <script src="_requirements.test.js"></script>
+    <script src="model.test.js"></script>
+
+  </body>
+</html>

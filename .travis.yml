@@ -1,5 +1,6 @@
 language: node_js
 env:
+  - TEST_SUITE=test-vanillajs-jasmine
   - TEST_SUITE=test-vanillajs-mocha
   - TEST_SUITE=test-vanillajs-qunit
 node_js:

@@ -6,6 +6,7 @@ todomvc-testing
 Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.com/) as an example:
 - Testem, Mocha and Blanket (Vanilla JS)
 - Testem, QUnit and Blanket (Vanilla JS)
+- Testem, Jasmine and Blanket (Vanilla JS)
 
 Installation
 ------------
