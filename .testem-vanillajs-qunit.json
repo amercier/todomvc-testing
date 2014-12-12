@@ -1,6 +1,6 @@
 {
   "framework": "qunit",
-  "test_page": "tests_qunit/vanillajs/index.html?coverage",
+  "test_page": "tests/vanillajs/qunit/index.html",
   "launch_in_ci": [
     "PhantomJS"
   ],
@@ -8,7 +8,7 @@
     "PhantomJS"
   ],
   "src_files": [
-    "app/examples/jquery/js/**/*.js",
-    "tests_qunit/vanillajs/**"
+    "app/examples/vanillajs/js/**/*.js",
+    "tests/vanillajs/qunit/**"
   ]
 }
