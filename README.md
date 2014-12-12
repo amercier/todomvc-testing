@@ -29,8 +29,8 @@ Installation
   npm install
   ```
 
-  Note: this will automatically install Bower components as 'bower install' is
-  registered in NPM install hook.
+  > Note: this will automatically install Bower components as 'bower install' is
+  > registered in NPM install hook.
 
 4. Run tests
 
@@ -40,7 +40,7 @@ Installation
   testem -f .testem-vanillajs-qunit.json
   ```
 
-  Note: you need to have `./node_modules/.bin/` in your `PATH`. To do that, add
-  `export PATH=./node_modules/.bin/:$PATH` in your `~/.bashrc` file.
-  Alternatively, if you don't want to alter your `PATH`, you can simply run
-  `./node_modules/.bin/testem` instead.
+  > Note: you need to have `./node_modules/.bin/` in your `PATH`. To do that, add
+  > `export PATH=./node_modules/.bin/:$PATH` in your `~/.bashrc` file.
+  > Alternatively, if you don't want to alter your `PATH`, you can simply run
+  > `./node_modules/.bin/testem` instead.
