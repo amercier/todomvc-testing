@@ -34,7 +34,7 @@ Installation
 
 4. Run tests
 
-Example using Testem, QUnit and Blanket:
+  Example using Testem, QUnit and Blanket:
 
   ```
   testem -f .testem-vanillajs-qunit.json
