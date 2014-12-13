@@ -36,10 +36,10 @@ Installation
 
 4. Run tests
 
-  Example using Testem, QUnit and Blanket:
+  Example using Testem, QUnit and Blanket (see [package.json](package.json) for others):
 
   ```
-  testem -f .testem-vanillajs-qunit.json
+  npm run test-vanillajs-qunit
   ```
 
   > Note: you need to have `./node_modules/.bin/` in your `PATH`. To do that, add
