@@ -41,8 +41,3 @@ Installation
   ```
   npm run test-vanillajs-qunit
   ```
-
-  > Note: you need to have `./node_modules/.bin/` in your `PATH`. To do that, add
-  > `export PATH=./node_modules/.bin/:$PATH` in your `~/.bashrc` file.
-  > Alternatively, if you don't want to alter your `PATH`, you can simply run
-  > `./node_modules/.bin/testem` instead.
