@@ -11,7 +11,7 @@
 
     <!-- QUnit dependencies -->
     <script src="../../../bower_components/qunit/qunit/qunit.js"></script>
-    <script src="../../../bower_components/blanket/dist/qunit/blanket.js"></script>
+    <script src="../../../bower_components/blanket/dist/qunit/blanket.js" data-cover-flags="sourceURL" data-cover-never="./model.test.js"></script>
     <script src="/testem.js"></script>
 
     <!-- Source -->
@@ -27,7 +27,7 @@
     <script src="../mocks/store.mock.js"></script>
 
     <!-- Tests -->
-    <script src="_requirements.test.js"></script>
-    <script src="model.test.js"></script>
+    <script src="./_requirements.test.js" data-cover></script>
+    <script src="./model.test.js" data-cover></script>
   </body>
 </html>
