@@ -1,0 +1,16 @@
+{
+  "framework": "jasmine",
+  "test_page": "tests/vanillajs/jasmine/index-istanbul.html",
+  "launch_in_ci": [
+    "PhantomJS"
+  ],
+  "launch_in_dev": [
+    "PhantomJS"
+  ],
+  "src_files": [
+    "app/examples/vanillajs/js/**/*.js",
+    "tests/vanillajs/jasmine/**"
+  ],
+  "before_tests": "./node_modules/.bin/istanbul instrument --output app-istanbul/examples/vanillajs/js app/examples/vanillajs/js",
+  "after_tests": "./node_modules/.bin/istanbul report"
+}

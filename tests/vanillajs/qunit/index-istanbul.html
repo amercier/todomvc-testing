@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QUnit Javascript Tests</title>
+    <link rel="stylesheet" href="../../../bower_components/qunit/qunit/qunit.css"/>
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- QUnit dependencies -->
+    <script src="../../../bower_components/qunit/qunit/qunit.js"></script>
+    <script src="../../../bower_components/blanket/dist/qunit/blanket.js"></script>
+    <script src="/testem.js"></script>
+    <script>
+      Testem.on('all-test-results', function(results){
+        var xhr = new XMLHttpRequest()
+        xhr.open('POST', 'http://localhost:7358/')
+        xhr.send(JSON.stringify(window.__coverage__))
+      })
+    </script>
+
+    <!-- Source -->
+    <script src="../../../app-istanbul/examples/vanillajs/js/controller.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/helpers.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/model.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/store.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/template.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/view.js"></script>
+    <script src="../../../app-istanbul/examples/vanillajs/js/view.js"></script>
+
+    <!-- Mocks -->
+    <script src="../mocks/store.mock.js"></script>
+
+    <!-- Tests -->
+    <script src="_requirements.test.js"></script>
+    <script src="model.test.js"></script>
+  </body>
+</html>

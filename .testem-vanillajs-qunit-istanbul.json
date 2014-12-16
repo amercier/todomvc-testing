@@ -1,0 +1,21 @@
+{
+  "framework": "mocha+chai",
+  "test_page": "tests/vanillajs/mocha/index-istanbul.html",
+  "launch_in_ci": [
+    "Mocha"
+  ],
+  "launch_in_dev": [
+    "Mocha"
+  ],
+  "src_files": [
+    "app/examples/vanillajs/js/**/*.js",
+    "tests/vanillajs/mocks/*",
+    "tests/vanillajs/mocha/**"
+  ],
+  "launchers": {
+    "Mocha": {
+      "command": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha --print none --report html -- tests/vanillajs/mocks/* tests/vanillajs/mocha/*.test.js -R tap",
+      "protocol": "tap"
+    }
+  }
+}
