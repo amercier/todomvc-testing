@@ -22,7 +22,10 @@ var mocha = new Mocha({
 });
 
 [
-  'tests/vanillajs/mocha/_requirements.test.js'
+  // 'app/examples/vanillajs/js/model.js',
+  // 'tests/vanillajs/mocks/store.mock.js',
+  // 'tests/vanillajs/mocha/_requirements.test.js',
+  'tests/vanillajs/mocha/model.test.js',
 ].forEach(function (pattern) {
   glob(pattern).forEach(function (file) {
     mocha.addFile(file);
@@ -35,4 +38,4 @@ var mocha = new Mocha({
       process.exit(failures);
     });
   });
-}.bind(window))();
+})();

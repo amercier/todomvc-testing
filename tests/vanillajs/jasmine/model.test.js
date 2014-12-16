@@ -1,6 +1,11 @@
 (function() {
 
+  var jsdom = require('jsdom').jsdom;
+
   describe('Model', function() {
+
+    document = jsdom();
+    window = document.parentWindow;
 
     it('Should add a Model function to the global app object', function() {
       expect(!!app).toBe(true);
