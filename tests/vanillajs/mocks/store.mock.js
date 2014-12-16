@@ -1,3 +1,5 @@
+require('./browser.mock.js');
+
 /*jshint eqeqeq:false */
 (function (window) {
   'use strict';

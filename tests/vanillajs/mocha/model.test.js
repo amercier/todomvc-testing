@@ -1,6 +1,11 @@
 (function() {
+  var jsdom = require('mocha-jsdom');
 
   describe('Model', function() {
+
+    jsdom();
+    require('../mocks/store.mock');
+    require('../../../app/examples/vanillajs/js/model');
 
     it('Should add a Model function to the global app object', function() {
       assert.ok(!!app);
@@ -72,5 +77,4 @@
     })();
 
   });
-
 })();
