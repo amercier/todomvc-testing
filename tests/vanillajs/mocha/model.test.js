@@ -2,21 +2,24 @@
 
   describe('Model', function() {
 
+    require('../../../app/examples/vanillajs/js/model.js');
+    require('../mocks/store.mock.js');
+
     it('Should add a Model function to the global app object', function() {
-      assert.ok(!!app);
-      assert.equal(typeof app, 'object');
-      assert.ok(!!app.Model);
-      assert.equal(typeof app.Model, 'function');
+      assert.ok(!!window.app);
+      assert.equal(typeof window.app, 'object');
+      assert.ok(!!window.app.Model);
+      assert.equal(typeof window.app.Model, 'function');
     });
 
     it('Should create a new instance of Model', function() {
-      var model = new app.Model();
-      assert.ok(model instanceof app.Model);
+      var model = new window.app.Model();
+      assert.ok(model instanceof window.app.Model);
     });
 
     it('Should create a new todo', function () {
-      var store = new mocks.Store('_STORE_');
-      var model = new app.Model(store);
+      var store = new window.mocks.Store('_STORE_');
+      var model = new window.app.Model(store);
       assert.equal(store._data.todos.length, 0);
       model.create('_MODEL1_');
       assert.equal(store._data.todos.length, 1);
@@ -27,8 +30,8 @@
 
     // read
     (function() {
-      var store = new mocks.Store('_STORE_');
-      var model = new app.Model(store);
+      var store = new window.mocks.Store('_STORE_');
+      var model = new window.app.Model(store);
       model.create('_MODEL1_');
       model.create('_MODEL1_');
       model.create('_MODEL2_');
@@ -72,5 +75,4 @@
     })();
 
   });
-
 })();
