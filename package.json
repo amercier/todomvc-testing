@@ -2,10 +2,10 @@
   "private": true,
   "scripts": {
     "install": "./node_modules/.bin/bower install",
-    "watch-vanillajs-jasmine": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json",
+    "watch-vanillajs-jasmine": "./node_modules/.bin/testem -f .testem-vanillajs-jasmine.json",
     "watch-vanillajs-mocha": "./node_modules/.bin/testem -f .testem-vanillajs-mocha.json",
     "watch-vanillajs-qunit": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json",
-    "test-vanillajs-jasmine": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json ci",
+    "test-vanillajs-jasmine": "./node_modules/.bin/testem -f .testem-vanillajs-jasmine.json ci",
     "test-vanillajs-mocha": "./node_modules/.bin/testem -f .testem-vanillajs-mocha.json ci",
     "test-vanillajs-qunit": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json ci"
   },
