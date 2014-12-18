@@ -9,6 +9,7 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
 - Testem, QUnit and Blanket (Vanilla JS)
 - Karma, Jasmine and Blanket (Vanilla JS)
 - Karma, Mocha and Blanket (Vanilla JS)
+- Karma, QUnit and Blanket (Vanilla JS)
 
 Installation
 ------------

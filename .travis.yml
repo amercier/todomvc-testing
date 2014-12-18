@@ -5,6 +5,7 @@ env:
   - TEST_SUITE=testem-test-vanillajs-qunit
   - TEST_SUITE=karma-test-vanillajs-jasmine
   - TEST_SUITE=karma-test-vanillajs-mocha
+  - TEST_SUITE=karma-test-vanillajs-qunit
 node_js:
   - "0.11"
   - "0.10"

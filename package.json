@@ -10,8 +10,10 @@
     "test-vanillajs-qunit": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json ci",
     "karma-test-vanillajs-jasmine": "./node_modules/karma/bin/karma start tests/vanillajs/jasmine/karma.conf.js",
     "karma-test-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js",
+    "karma-test-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js",
     "karma-watch-vanillajs-jasmine": "./node_modules/karma/bin/karma start tests/vanillajs/jasmine/karma.conf.js --no-single-run --auto-watch",
-    "karma-watch-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js --no-single-run --auto-watch"
+    "karma-watch-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js --no-single-run --auto-watch",
+    "karma-watch-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js --no-single-run --auto-watch"
   },
   "devDependencies": {
     "bower": "^1.3.12",
@@ -20,6 +22,7 @@
     "karma-jasmine": "^0.3.2",
     "karma-mocha": "^0.1.10",
     "karma-phantomjs-launcher": "^0.1.4",
+    "karma-qunit": "^0.1.4",
     "phantomjs": "^1.9.12",
     "testem": "^0.6.24"
   }

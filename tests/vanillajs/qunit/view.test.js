@@ -5,6 +5,11 @@
     store,
     model,
     view;
+  if(!$container) {
+    $container = document.createElement('div');
+    $container.id = 'jasmine-fixture';
+    document.body.appendChild($container);
+  }
 
   QUnit.module('View', {
     beforeEach: function () {
