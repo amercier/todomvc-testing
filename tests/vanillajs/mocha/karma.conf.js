@@ -19,9 +19,9 @@ module.exports = function(config) {
       dir: 'tests/vanillajs/mocha/coverage',
       reporters: [
         { type: 'html', subdir: 'html' },
-        { type: 'lcov', subdir: 'lcov' },
-        { type: 'text', subdir: '.', file: 'text.txt' },
-        { type: 'text-summary', subdir: '.', file: 'text-summary.txt' },
+        { type: 'lcovonly', subdir: '.', file: 'report.lcov' },
+        { type: 'text', subdir: '.', file: 'report.txt' },
+        { type: 'text-summary', subdir: '.', file: 'summary.txt' },
       ]
     },
     autoWatch: false,

@@ -9,7 +9,7 @@
     "testem-test-vanillajs-mocha": "./node_modules/.bin/testem -f .testem-vanillajs-mocha.json ci",
     "testem-test-vanillajs-qunit": "./node_modules/.bin/testem -f .testem-vanillajs-qunit.json ci",
     "karma-test-vanillajs-jasmine": "./node_modules/karma/bin/karma start tests/vanillajs/jasmine/karma.conf.js",
-    "karma-test-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js && cat tests/vanillajs/mocha/coverage/text-summary.txt && echo",
+    "karma-test-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js && cat tests/vanillajs/mocha/coverage/summary.txt && echo",
     "karma-test-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js",
     "karma-watch-vanillajs-jasmine": "./node_modules/karma/bin/karma start tests/vanillajs/jasmine/karma.conf.js --no-single-run --auto-watch",
     "karma-watch-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js --no-single-run --auto-watch",
