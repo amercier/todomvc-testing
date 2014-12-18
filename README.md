@@ -28,26 +28,26 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   <tr>
     <td>Istanbul</td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
   </tr>
   <tr>
     <td rowspan="2">Testem</td>
     <td>Blanket</td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
     <td>
-      ✓ Vanilla JS  
+      ![✓](https://raw.githubusercontent.com/amercier/todomvc-testing/master/favicon.ico) Vanilla JS  
     </td>
   </tr>
   <tr>
