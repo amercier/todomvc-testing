@@ -1,10 +1,10 @@
 language: node_js
 env:
-  - TEST_SUITE=test-vanillajs-jasmine
-  - TEST_SUITE=test-vanillajs-mocha
-  - TEST_SUITE=test-vanillajs-qunit
-node_js:
-  - "0.11"
-  - "0.10"
+  - TEST_SUITE=testem-test-vanillajs-jasmine
+  - TEST_SUITE=testem-test-vanillajs-mocha
+  - TEST_SUITE=testem-test-vanillajs-qunit
+  - TEST_SUITE=karma-test-vanillajs-jasmine
+  - TEST_SUITE=karma-test-vanillajs-mocha
+  - TEST_SUITE=karma-test-vanillajs-qunit
 script: npm run $TEST_SUITE
 sudo: false

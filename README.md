@@ -4,9 +4,12 @@ todomvc-testing
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-testing/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-testing)
 
 Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.com/) as an example:
+- Testem, Jasmine and Blanket (Vanilla JS)
 - Testem, Mocha and Blanket (Vanilla JS)
 - Testem, QUnit and Blanket (Vanilla JS)
-- Testem, Jasmine and Blanket (Vanilla JS)
+- Karma, Jasmine and Istanbul (Vanilla JS)
+- Karma, Mocha and Istanbul (Vanilla JS)
+- Karma, QUnit and Istanbul (Vanilla JS)
 
 Installation
 ------------
@@ -39,5 +42,5 @@ Installation
   Example using Testem, QUnit and Blanket (see [package.json](package.json) for others):
 
   ```
-  npm run test-vanillajs-qunit
+  npm run testem-test-vanillajs-qunit
   ```
