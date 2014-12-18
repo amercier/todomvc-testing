@@ -4,9 +4,11 @@ todomvc-testing
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-testing/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-testing)
 
 Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.com/) as an example:
+- Testem, Jasmine and Blanket (Vanilla JS)
 - Testem, Mocha and Blanket (Vanilla JS)
 - Testem, QUnit and Blanket (Vanilla JS)
-- Testem, Jasmine and Blanket (Vanilla JS)
+- Karma, Jasmine and Blanket (Vanilla JS)
+- Karma, Mocha and Blanket (Vanilla JS)
 
 Installation
 ------------
