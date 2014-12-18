@@ -1,6 +1,6 @@
 {
   "framework": "mocha+chai",
-  "test_page": "tests/vanillajs/mocha/index.mustache",
+  "test_page": "tests/vanillajs/mocha/index.html",
   "launch_in_ci": [
     "PhantomJS"
   ],
@@ -9,8 +9,8 @@
   ],
   "src_files": [
     "app/examples/vanillajs/js/**/*.js",
-    "tests/vanillajs/mocks/**/*.mock.js",
-    "tests/vanillajs/mocha/**/*.test.js"
+    "../mocks/*.mock.js",
+    "./**/*.test.js"
   ],
   "src_files_ignore": [
     "app/examples/vanillajs/js/app.js"
