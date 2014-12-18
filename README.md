@@ -42,5 +42,5 @@ Installation
   Example using Testem, QUnit and Blanket (see [package.json](package.json) for others):
 
   ```
-  npm run test-vanillajs-qunit
+  npm run testem-test-vanillajs-qunit
   ```
