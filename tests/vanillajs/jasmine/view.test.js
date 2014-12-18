@@ -5,13 +5,14 @@
     store,
     model,
     view;
-  if(!$container) {
-    $container = document.createElement('div');
-    $container.id = 'jasmine-fixture';
-    document.body.appendChild($container);
-  }
 
   beforeEach(function () {
+    if(!$container) {
+      $container = document.createElement('div');
+      $container.id = 'jasmine-fixture';
+      document.body.appendChild($container);
+    }
+
     $container.innerHTML = '' +
       '<div id="todo-list"></div>' +
       '<div id="todo-count"></div>';
