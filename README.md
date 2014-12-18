@@ -7,16 +7,15 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
 
 <table>
   <tr>
-    <th>Platform</th>
-    <th>Runner</th>
-    <th>Coverage</th>
+    <th rowspan="2">Platform</th>
+    <th rowspan="2">Runner</th>
+    <th rowspan="2">Coverage</th>
     <th colspan="3">Framework</th>
   </tr>
   <tr>
-    <th colspan="3"></th>
-    <th>Jasmine</th>
-    <th>Mocha</th>
-    <th>QUnit</th>
+    <td>Jasmine</td>
+    <td>Mocha</td>
+    <td>QUnit</td>
   </tr>
   <tr>
     <td rowspan="4">Browser</td>
