@@ -29,26 +29,26 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   <tr>
     <td>Istanbul</td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
   </tr>
   <tr>
-    <td rowi="2">Testem</td>
+    <td rowspan="2">Testem</td>
     <td>Blanket</td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
     <td>
-      <i style="color:#22ee5b">✓</i> Vanilla JS  
+      ✓ Vanilla JS  
     </td>
   </tr>
   <tr>
