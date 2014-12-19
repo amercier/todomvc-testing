@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "install": "./node_modules/.bin/bower install",
-    "test": "node -e 'console.log(Object.keys(require(\"./package.json\").scripts).join(\"\\n\"))' | grep 'test-' | while read script; do echo; echo \"###################### $(echo $script) #####################\"; npm run $script || exit 1; done",
+    "list": "node -e 'console.log(Object.keys(require(\"./package.json\").scripts).join(\"\\n\"))' | egrep -v '^(test|list|install)$'",
+    "test": "npm run list | grep -v watch | while read script; do echo; echo \"###################### $(echo $script) #####################\"; npm run $script || exit 1; done",
     "testem-watch-vanillajs-jasmine": "./node_modules/.bin/testem -f tests/vanillajs/jasmine/testem.js",
     "testem-watch-vanillajs-mocha": "./node_modules/.bin/testem -f tests/vanillajs/mocha/testem.js",
     "testem-watch-vanillajs-qunit": "./node_modules/.bin/testem -f tests/vanillajs/qunit/testem.js",

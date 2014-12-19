@@ -91,7 +91,7 @@ Installation
 
 4. Run tests
 
-  Example using Testem, QUnit and Blanket (see [package.json](package.json) for others):
+  Example using Testem, QUnit and Blanket (use `npm run list` for list all):
 
   ```
   npm run testem-test-vanillajs-qunit
