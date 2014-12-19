@@ -1,0 +1,20 @@
+{
+  "framework": "mocha+chai",
+  "test_page": "tests/vanillajs/mocha/index-istanbul.mustache",
+  "launch_in_ci": [
+    "PhantomJS"
+  ],
+  "launch_in_dev": [
+    "PhantomJS"
+  ],
+  "src_files": [
+    "app-istanbul/examples/vanillajs/js/**/*.js",
+    "tests/vanillajs/mocks/**/*.mock.js",
+    "tests/vanillajs/mocha/**/*.test.js"
+  ],
+  "src_files_ignore": [
+    "app-istanbul/examples/vanillajs/js/app.js"
+  ],
+  "before_tests": "istanbul instrument --output app-istanbul/examples/vanillajs/js app/examples/vanillajs/js",
+  "after_tests": "istanbul report --dir tests/vanillajs/mocha/coverage html && rm coverage.json"
+}
