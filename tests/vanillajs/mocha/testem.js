@@ -1,4 +1,4 @@
-{
+module.exports = {
   "framework": "mocha+chai",
   "test_page": "tests/vanillajs/mocha/index.mustache",
   "launch_in_ci": [
@@ -15,4 +15,4 @@
   "src_files_ignore": [
     "app/examples/vanillajs/js/app.js"
   ]
-}
+};

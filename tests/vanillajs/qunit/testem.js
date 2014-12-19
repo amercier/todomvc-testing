@@ -1,4 +1,4 @@
-{
+module.exports = {
   "framework": "qunit",
   "test_page": "tests/vanillajs/qunit/index.mustache",
   "launch_in_ci": [
