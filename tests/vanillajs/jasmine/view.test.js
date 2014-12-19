@@ -6,27 +6,27 @@
     model,
     view;
 
-  beforeEach(function () {
-    if(!$container) {
-      $container = document.createElement('div');
-      $container.id = 'jasmine-fixture';
-      document.body.appendChild($container);
-    }
-
-    $container.innerHTML = '' +
-      '<div id="todo-list"></div>' +
-      '<div id="todo-count"></div>';
-    template = new app.Template();
-    store = new mocks.Store('_STORE_');
-    model = new app.Model(store);
-    view = new app.View(template);
-  });
-
-  afterEach(function () {
-    $container.innerHTML = '';
-  });
-
   describe('View', function () {
+
+    beforeEach(function () {
+      if(!$container) {
+        $container = document.createElement('div');
+        $container.id = 'jasmine-fixture';
+        document.body.appendChild($container);
+      }
+
+      $container.innerHTML = '' +
+        '<div id="todo-list"></div>' +
+        '<div id="todo-count"></div>';
+      template = new app.Template();
+      store = new mocks.Store('_STORE_');
+      model = new app.Model(store);
+      view = new app.View(template);
+    });
+
+    afterEach(function () {
+      $container.innerHTML = '';
+    });
 
     it('showEntries displays all todos', function() {
       model.create('_MODEL1_');
