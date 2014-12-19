@@ -1,4 +1,4 @@
-{
+module.exports = {
   "framework": "jasmine",
   "test_page": "tests/vanillajs/jasmine/index.mustache",
   "launch_in_ci": [
