@@ -1,6 +1,9 @@
 (function() {
 
-  var foo1 = false, foo2 = false, nestedFoo = false;
+  var foo1 = false;
+  var foo2 = false;
+  var nestedFoo = false;
+  var promiseFoo = false;
 
   QUnit.module('Async', {
     beforeEach: function(assert) {
@@ -17,6 +20,13 @@
         foo2 = true;
         done2();
       }, 150);
+
+      return new RSVP.Promise(function(resolve, reject) {
+        setTimeout(function() {
+          promiseFoo = true;
+          resolve();
+        }, 200);
+      }).promise;
     }
   });
 
@@ -67,6 +77,22 @@
 
       done1();
     }, 100);
+  });
+
+  QUnit.test('It should wait for a Promise in beforeEach', function(assert) {
+    assert.expect(1);
+    assert.ok(nestedFoo, 'Test executed after a nested timeout in beforeEach');
+  });
+
+  QUnit.test('It should wait for a Promise', function(assert) {
+    assert.expect(1);
+
+    return new RSVP.Promise(function(resolve, reject) {
+      setTimeout(function() {
+        assert.ok(nestedFoo, 'Test executed in the promise');
+        resolve();
+      }, 50);
+    });
   });
 
 })();
