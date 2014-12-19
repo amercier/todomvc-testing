@@ -1,6 +1,31 @@
 (function() {
 
-  QUnit.module('Async');
+  var foo1 = false, foo2 = false, nestedFoo = false;
+
+  QUnit.module('Async', {
+    beforeEach: function(assert) {
+      var done1 = assert.async();
+      var done2 = assert.async();
+      setTimeout(function() {
+        foo1 = true;
+        setTimeout(function() {
+          nestedFoo = true;
+          done1();
+        }, 50);
+      }, 50);
+      setTimeout(function() {
+        foo2 = true;
+        done2();
+      }, 150);
+    }
+  });
+
+  QUnit.test('It should wait for beforeEach to terminate', function(assert) {
+    assert.expect(3);
+    assert.ok(foo1, 'Test executed after timeout in beforeEach');
+    assert.ok(foo2, 'Test executed after a second timeout in beforeEach');
+    assert.ok(nestedFoo, 'Test executed after a nested timeout in beforeEach');
+  });
 
   QUnit.test('It should support asynchronous tests', function(assert) {
     assert.expect(1);
