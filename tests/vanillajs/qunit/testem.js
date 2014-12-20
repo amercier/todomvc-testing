@@ -1,5 +1,5 @@
 /*jshint browser:false, node:true */
-
+/*jshint camelcase: false */
 var globby = require('globby');
 
 var config = {
