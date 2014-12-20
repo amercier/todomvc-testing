@@ -4,7 +4,7 @@ var globby = require('globby');
 
 var config = {
   framework: 'qunit',
-  test_page: 'tests/vanillajs/qunit/index.mustache',
+  test_page: 'tests/vanillajs/qunit/index.mustache?coverage',
   launch_in_ci: [
     'PhantomJS'
   ],
@@ -15,7 +15,8 @@ var config = {
     'test.css'
   ],
   _lib_files: globby.sync([
-    'bower_components/rsvp/rsvp.js'
+    'bower_components/rsvp/rsvp.js',
+    'bower_components/blanket/dist/qunit/blanket.js'
   ]),
   _src_files: globby.sync([
     'app/examples/vanillajs/js/*.js',
