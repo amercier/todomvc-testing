@@ -4,7 +4,7 @@ var globby = require('globby');
 
 var config = {
   framework: 'mocha+chai',
-  test_page: 'tests/vanillajs/mocha/index.mustache',
+  test_page: 'tests/vanillajs/mocha/index.mustache?coverage',
   launch_in_ci: [
     'PhantomJS'
   ],
@@ -15,6 +15,8 @@ var config = {
     'test.css'
   ],
   _lib_files: globby.sync([
+    'bower_components/blanket/dist/qunit/blanket.js',
+    'bower_components/blanket/src/adapters/mocha-blanket.js'
   ]),
   _src_files: globby.sync([
     'app/examples/vanillajs/js/*.js',

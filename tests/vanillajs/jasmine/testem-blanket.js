@@ -3,8 +3,8 @@
 var globby = require('globby');
 
 var config = {
-  framework: 'mocha+chai',
-  test_page: 'tests/vanillajs/mocha/index.mustache',
+  framework: 'jasmine',
+  test_page: 'tests/vanillajs/jasmine/index.mustache?coverage',
   launch_in_ci: [
     'PhantomJS'
   ],
@@ -15,6 +15,8 @@ var config = {
     'test.css'
   ],
   _lib_files: globby.sync([
+    'bower_components/blanket/dist/qunit/blanket.js',
+    'bower_components/blanket/src/adapters/jasmine-2.x-blanket.js'
   ]),
   _src_files: globby.sync([
     'app/examples/vanillajs/js/*.js',
@@ -22,7 +24,7 @@ var config = {
   ]),
   _test_files: globby.sync([
     'tests/vanillajs/mocks/*.mock.js',
-    'tests/vanillajs/mocha/*.test.js'
+    'tests/vanillajs/jasmine/*.test.js'
   ])
 };
 
