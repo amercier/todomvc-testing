@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>TodoMVC Javascript Tests</title>
+    <meta charset="utf-8"/>
+    <title>Mocha Javascript Tests</title>
     <link rel="stylesheet" href="../../../bower_components/mocha/mocha.css"/>
-    {{#styles}}
-      <link rel="stylesheet" href="{{.}}">
-    {{/styles}}
+    {{#css_files}}
+      <link rel="stylesheet" href="{{.}}"/>
+    {{/css_files}}
   </head>
   <body>
     <div id="mocha"></div>
@@ -15,20 +15,27 @@
     <!-- Mocha dependencies -->
     <script src="../../../bower_components/mocha/mocha.js"></script>
     <script src="../../../bower_components/chai/chai.js"></script>
-    <script src="../../../bower_components/blanket/dist/qunit/blanket.js" data-cover-only="../../../app/.*"></script>
-    <script src="../../../bower_components/blanket/src/adapters/mocha-blanket.js"></script>
-    <script src="/testem.js"></script>
     <script>
       assert = chai.assert;
       mocha.setup({
         ui: 'bdd'
       });
     </script>
+    {{#_lib_files}}
+      <script src="../../../{{.}}"></script>
+    {{/_lib_files}}
 
     <!-- Source -->
-    {{#serve_files}}
-      <script src="../../../{{src}}" data-cover></script>
-    {{/serve_files}}
+    {{#_src_files}}
+      <script src="../../../{{.}}" data-cover></script>
+    {{/_src_files}}
+
+    <!-- Tests -->
+    {{#_test_files}}
+      <script src="../../../{{.}}"></script>
+    {{/_test_files}}
+
+    <script src="/testem.js"></script>
 
     <!-- Start Mocha -->
     <script>

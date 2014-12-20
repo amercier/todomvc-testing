@@ -14,12 +14,18 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   </tr>
   <tr>
     <td>Jasmine</td>
-    <td>Mocha</td>
+    <td>Mocha + Chai</td>
     <td>QUnit</td>
   </tr>
   <tr>
-    <td rowspan="4">Browser</td>
-    <td rowspan="2">Karma</td>
+    <td rowspan="6">Browser</td>
+    <td rowspan="3">Karma</td>
+    <td>(none)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Blanket</td>
     <td></td>
     <td></td>
@@ -38,7 +44,18 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Testem</td>
+    <td rowspan="3">Testem</td>
+    <td>(none)</td>
+    <td>
+      ✓ Vanilla JS  
+    </td>
+    <td>
+      ✓ Vanilla JS  
+    </td>
+    <td>
+      ✓ Vanilla JS  
+    </td>
+  </tr>
     <td>Blanket</td>
     <td>
       ✓ Vanilla JS  

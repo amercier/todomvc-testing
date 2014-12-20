@@ -1,19 +1,35 @@
 /*jshint browser:false, node:true */
-module.exports = {
-  'framework': 'jasmine',
-  'test_page': 'tests/vanillajs/jasmine/index.mustache',
-  'launch_in_ci': [
+/*jshint camelcase: false */
+var globby = require('globby');
+
+var config = {
+  framework: 'jasmine',
+  test_page: 'tests/vanillajs/jasmine/index.mustache',
+  launch_in_ci: [
     'PhantomJS'
   ],
-  'launch_in_dev': [
+  launch_in_dev: [
     'PhantomJS'
   ],
-  'src_files': [
+  css_files: [
+    'test.css'
+  ],
+  _lib_files: globby.sync([
+  ]),
+  _src_files: globby.sync([
     'app/examples/vanillajs/js/*.js',
+    '!app/examples/vanillajs/js/app.js'
+  ]),
+  _test_files: globby.sync([
     'tests/vanillajs/mocks/*.mock.js',
     'tests/vanillajs/jasmine/*.test.js'
-  ],
-  'src_files_ignore': [
-    'app/examples/vanillajs/js/app.js'
-  ]
+  ])
 };
+
+config.src_files = [].join(
+  config._src_files,
+  config._lib_files,
+  config._test_files
+);
+
+module.exports = config;
