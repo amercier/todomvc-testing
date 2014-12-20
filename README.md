@@ -14,7 +14,7 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   </tr>
   <tr>
     <td>Jasmine</td>
-    <td>Mocha</td>
+    <td>Mocha + Chai</td>
     <td>QUnit</td>
   </tr>
   <tr>
