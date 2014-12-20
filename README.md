@@ -70,7 +70,7 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   <tr>
     <td>Istanbul</td>
     <td></td>
-    <td></td>
+    <td><a href="https://github.com/amercier/todomvc-testing/pull/7">PR#7</a></td>
     <td></td>
   </tr>
   <tr>
