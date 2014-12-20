@@ -1,10 +1,11 @@
 (function() {
+  'use strict';
 
-  var $container = document.getElementById('qunit-fixture'),
-    template,
-    store,
-    model,
-    view;
+  var $container = document.getElementById('qunit-fixture');
+  var template;
+  var store;
+  var model;
+  var view;
 
   QUnit.module('View', {
     beforeEach: function () {

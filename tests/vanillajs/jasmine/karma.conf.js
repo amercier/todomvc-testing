@@ -1,4 +1,7 @@
+/*jshint browser:false, node:true */
 module.exports = function(config) {
+  'use strict';
+
   config.set({
     basePath: '../../..',
     frameworks: ['jasmine'],

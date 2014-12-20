@@ -1,4 +1,7 @@
+/* global _someRandomVar:true */
+/* jshint strict:false */
 (function() {
+
   QUnit.module('Requirements');
 
   var _window = this;

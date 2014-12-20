@@ -1,10 +1,11 @@
 (function() {
+  'use strict';
 
-  var $container = document.getElementById('mocha-fixture'),
-    template,
-    store,
-    model,
-    view;
+  var $container = document.getElementById('mocha-fixture');
+  var template;
+  var store;
+  var model;
+  var view;
 
   describe('View', function () {
 

@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   var foo1 = false, foo2 = false, nestedFoo = false;
 
@@ -11,12 +12,16 @@
         foo1 = true;
         setTimeout(function() {
           nestedFoo = true;
-          ++doneCount == 2 && done();
+          if(++doneCount === 2) {
+            done();
+          }
         }, 50);
       }, 50);
       setTimeout(function() {
         foo2 = true;
-        ++doneCount == 2 && done();
+        if(++doneCount === 2) {
+          done();
+        }
       }, 150);
     });
 
@@ -38,12 +43,16 @@
 
       setTimeout(function() {
         expect(true).toEqual(true);
-        ++doneCount == 2 && done();
+        if(++doneCount === 2) {
+          done();
+        }
       }, 200);
 
       setTimeout(function() {
         expect(true).toEqual(true);
-        ++doneCount == 2 && done();
+        if(++doneCount === 2) {
+          done();
+        }
       }, 100);
     });
 
@@ -54,10 +63,14 @@
 
         setTimeout(function() {
           expect(true).toEqual(true);
-          ++doneCount == 2 && done();
+          if(++doneCount === 2) {
+            done();
+          }
         }, 100);
 
-        ++doneCount == 2 && done();
+        if(++doneCount === 2) {
+          done();
+        }
       }, 100);
     });
 

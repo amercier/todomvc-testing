@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   QUnit.module('Model');
 
   test('It should add a Model function to the global app object', function() {

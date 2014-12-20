@@ -1,3 +1,5 @@
+/* global _someRandomVar:true */
+/* jshint strict:false */
 (function() {
 
   var _window = this;

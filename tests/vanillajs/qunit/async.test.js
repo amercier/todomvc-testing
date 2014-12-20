@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   var foo1 = false;
   var foo2 = false;
@@ -21,7 +22,7 @@
         done2();
       }, 150);
 
-      return new RSVP.Promise(function(resolve, reject) {
+      return new RSVP.Promise(function(resolve) {
         setTimeout(function() {
           promiseFoo = true;
           resolve();
@@ -87,7 +88,7 @@
   QUnit.test('It should wait for a Promise', function(assert) {
     assert.expect(1);
 
-    return new RSVP.Promise(function(resolve, reject) {
+    return new RSVP.Promise(function(resolve) {
       setTimeout(function() {
         assert.ok(nestedFoo, 'Test executed in the promise');
         resolve();

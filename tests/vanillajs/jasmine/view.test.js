@@ -1,10 +1,11 @@
 (function() {
+  'use strict';
 
-  var $container = document.getElementById('jasmine-fixture'),
-    template,
-    store,
-    model,
-    view;
+  var $container = document.getElementById('jasmine-fixture');
+  var template;
+  var store;
+  var model;
+  var view;
 
   describe('View', function () {
 
