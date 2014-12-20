@@ -46,8 +46,12 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
   <tr>
     <td rowspan="3">Testem</td>
     <td>(none)</td>
-    <td></td>
-    <td></td>
+    <td>
+      ✓ Vanilla JS  
+    </td>
+    <td>
+      ✓ Vanilla JS  
+    </td>
     <td>
       ✓ Vanilla JS  
     </td>
