@@ -6,6 +6,7 @@ module.exports = function(config) {
     basePath: '../../..',
     frameworks: ['qunit'],
     files: [
+      'bower_components/rsvp/rsvp.js',
       'app/examples/vanillajs/js/*.js',
       'tests/vanillajs/mocks/*.mock.js',
       'tests/vanillajs/qunit/*.test.js'
