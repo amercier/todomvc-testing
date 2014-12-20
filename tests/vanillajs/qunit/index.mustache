@@ -13,10 +13,12 @@
     <!-- QUnit dependencies -->
     <script src="../../../bower_components/rsvp/rsvp.js"></script>
     <script src="../../../bower_components/qunit/qunit/qunit.js"></script>
-    <script src="../../../bower_components/blanket/dist/qunit/blanket.js" data-cover-only="../../../app/.*"></script>
+    {{#lib_files}}
+      <script src="../../../{{src}}" {{{attr}}}></script>
+    {{/lib_files}}
     <script src="/testem.js"></script>
 
     <!-- Source -->
-    {{#serve_files}}<script src="../../../{{src}}" data-cover></script>{{/serve_files}}
+    {{#serve_files}}<script src="../../../{{src}}" {{{../src_attr}}}></script>{{/serve_files}}
   </body>
 </html>

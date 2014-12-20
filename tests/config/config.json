@@ -1,0 +1,23 @@
+{
+  "src": {
+    "include": "app/examples/vanillajs/js/*.js",
+    "exclude": "app/examples/vanillajs/js/app.js"
+  },
+  "tests": [
+    "tests/vanillajs/mocks/*.mock.js",
+    "tests/vanillajs/qunit/*.test.js"
+  ],
+  "lib": {
+    "blanket": [
+    ],
+    "mocha": [
+      "../../../bower_components/mocha/mocha.css",
+      "../../../bower_components/mocha/mocha.js"
+    ],
+    "qunit": [
+      "bower_components/qunit/qunit/qunit.css",
+      "bower_components/qunit/qunit/qunit.js"
+    ],
+    "rsvp": "bower_components/rsvp/rsvp.js"
+  }
+}
