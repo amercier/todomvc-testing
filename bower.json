@@ -1,7 +1,7 @@
 {
   "name": "todomvc-testing",
   "devDependencies": {
-    "mocha": "~2.0.1",
+    "mocha": "~2.1.0",
     "chai": "~1.10.0",
     "qunit": "~1.16.0",
     "blanket": "master",
