@@ -1,1 +1,2 @@
+/*global QUnit*/
 QUnit.notifications();
