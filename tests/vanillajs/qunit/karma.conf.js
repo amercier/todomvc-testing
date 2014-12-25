@@ -4,7 +4,7 @@ module.exports = function(config) {
 
   config.set({
     basePath: '../../..',
-    frameworks: ['qunit'],
+    frameworks: ['qunit', 'qunit-sb'],
     files: [
       'bower_components/rsvp/rsvp.js',
       'app/examples/vanillajs/js/*.js',
@@ -15,7 +15,7 @@ module.exports = function(config) {
       'app/examples/vanillajs/js/app.js'
     ],
     browsers: ['PhantomJS'],
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress', 'coverage', 'notify'],
     preprocessors: {
       'app/examples/vanillajs/js/*.js': ['coverage']
     },
@@ -25,7 +25,7 @@ module.exports = function(config) {
         { type: 'html', subdir: 'html' },
         { type: 'lcovonly', subdir: '.', file: 'report.lcov' },
         { type: 'text', subdir: '.', file: 'report.txt' },
-        { type: 'text-summary', subdir: '.', file: 'summary.txt' },
+        { type: 'text-summary' },
       ]
     },
     autoWatch: false,

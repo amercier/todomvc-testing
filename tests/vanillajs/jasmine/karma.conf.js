@@ -14,7 +14,7 @@ module.exports = function(config) {
       'app/examples/vanillajs/js/app.js'
     ],
     browsers: ['PhantomJS'],
-    reporters: ['progress', 'coverage'],
+    reporters: ['html', 'progress', 'coverage'],
     preprocessors: {
       'app/examples/vanillajs/js/*.js': ['coverage']
     },
