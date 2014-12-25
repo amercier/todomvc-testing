@@ -1,11 +1,12 @@
 {
   "name": "todomvc-testing",
   "devDependencies": {
-    "mocha": "~2.1.0",
-    "chai": "~1.10.0",
-    "qunit": "~1.16.0",
     "blanket": "master",
+    "chai": "~1.10.0",
     "jasmine": "~2.1.3",
+    "mocha": "~2.1.0",
+    "qunit": "~1.16.0",
+    "qunit-notifications": "amercier/qunit-notifications#fix-qunit-1.16",
     "rsvp": "~3.0.16"
   }
 }

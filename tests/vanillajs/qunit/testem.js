@@ -15,6 +15,8 @@ var config = {
     'test.css'
   ],
   _lib_files: globby.sync([
+    'bower_components/qunit-notifications/index.js',
+    'tests/config/qunit-notifications.js',
     'bower_components/rsvp/rsvp.js'
   ]),
   _src_files: globby.sync([
