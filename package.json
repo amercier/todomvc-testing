@@ -22,7 +22,8 @@
     "karma-test-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js && cat tests/vanillajs/qunit/coverage/summary.txt && echo",
     "karma-watch-vanillajs-jasmine": "./node_modules/karma/bin/karma start tests/vanillajs/jasmine/karma.conf.js --no-single-run --auto-watch",
     "karma-watch-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js --no-single-run --auto-watch",
-    "karma-watch-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js --no-single-run --auto-watch"
+    "karma-watch-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js --no-single-run --auto-watch",
+    "testem-watch-jquery-qunit": "testem -f tests/jquery/qunit/testem.js"
   },
   "devDependencies": {
     "bower": "^1.3.12",

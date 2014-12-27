@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>QUnit Javascript Tests</title>
+    <link rel="stylesheet" href="../../../bower_components/qunit/qunit/qunit.css"/>
+    {{#css_files}}
+      <link rel="stylesheet" href="{{.}}"/>
+    {{/css_files}}
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- QUnit dependencies -->
+    <script src="../../../bower_components/qunit/qunit/qunit.js"></script>
+    {{#_lib_files}}
+      <script src="../../../{{.}}"></script>
+    {{/_lib_files}}
+
+    <!-- Source -->
+    {{#_src_files}}
+      <script src="../../../{{.}}" data-cover></script>
+    {{/_src_files}}
+
+    <!-- Tests -->
+    {{#_test_files}}
+      <script src="../../../{{.}}"></script>
+    {{/_test_files}}
+
+    <script src="/testem.js"></script>
+  </body>
+</html>
