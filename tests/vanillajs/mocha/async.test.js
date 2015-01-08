@@ -1,4 +1,4 @@
-(function() {
+(function(describe, it, expect) {
   'use strict';
 
   var foo1 = false, foo2 = false, nestedFoo = false;
@@ -26,14 +26,14 @@
     });
 
     it('Should wait for beforeEach to terminate', function() {
-      assert.ok(foo1, 'Test executed after timeout in beforeEach');
-      assert.ok(foo2, 'Test executed after a second timeout in beforeEach');
-      assert.ok(nestedFoo, 'Test executed after a nested timeout in beforeEach');
+      expect(foo1, 'Test executed after timeout in beforeEach').to.be.true;
+      expect(foo2, 'Test executed after a second timeout in beforeEach').to.be.true;
+      expect(nestedFoo, 'Test executed after a nested timeout in beforeEach').to.be.true;
     });
 
     it('Should support asynchronous tests', function(done) {
       setTimeout(function() {
-        assert.ok(true, 'Test resumed from async operation 1');
+        expect(true).to.be.true;
         done();
       }, 100);
     });
@@ -42,14 +42,14 @@
       var doneCount = 0;
 
       setTimeout(function() {
-        assert.ok(true, 'Test resumed from async operation 1');
+        expect(true).to.be.true;
         if(++doneCount === 2) {
           done();
         }
       }, 200);
 
       setTimeout(function() {
-        assert.ok(true, 'Test resumed from async operation 2');
+        expect(true).to.be.true;
         if(++doneCount === 2) {
           done();
         }
@@ -59,10 +59,10 @@
     it('Should support nested asynchronous tests', function(done) {
       var doneCount = 0;
       setTimeout(function() {
-        assert.ok(true, 'Test resumed from async operation');
+        expect(true).to.be.true;
 
         setTimeout(function() {
-          assert.ok(true, 'Test resumed from nested async operation');
+          expect(true).to.be.true;
           if(++doneCount === 2) {
             done();
           }
@@ -76,4 +76,8 @@
 
   });
 
-})();
+})(
+  window.describe,
+  window.it,
+  chai.expect
+);
