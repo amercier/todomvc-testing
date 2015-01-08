@@ -1,4 +1,4 @@
-(function() {
+(function(QUnit) {
   'use strict';
 
   var foo1 = false;
@@ -96,4 +96,4 @@
     });
   });
 
-})();
+})(window.QUnit);

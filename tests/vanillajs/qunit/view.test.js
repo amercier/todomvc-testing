@@ -1,4 +1,4 @@
-(function() {
+(function(QUnit) {
   'use strict';
 
   var $container = document.getElementById('qunit-fixture');
@@ -28,27 +28,27 @@
     }
   });
 
-  test('showEntries displays all todos', function() {
+  QUnit.test('showEntries displays all todos', function(assert) {
     model.create('_MODEL1_');
     model.create('_MODEL2_');
     model.create('_MODEL3_');
     model.read(function (data) { view.render('showEntries', data); });
 
-    QUnit.assert.equal(document.querySelectorAll('#todo-list > *').length, 3);
-    QUnit.assert.strictEqual(document.querySelector('#todo-list > :nth-child(1)').innerText.trim(), '_MODEL1_');
-    QUnit.assert.strictEqual(document.querySelector('#todo-list > :nth-child(2)').innerText.trim(), '_MODEL2_');
-    QUnit.assert.strictEqual(document.querySelector('#todo-list > :nth-child(3)').innerText.trim(), '_MODEL3_');
+    assert.equal(document.querySelectorAll('#todo-list > *').length, 3);
+    assert.strictEqual(document.querySelector('#todo-list > :nth-child(1)').innerText.trim(), '_MODEL1_');
+    assert.strictEqual(document.querySelector('#todo-list > :nth-child(2)').innerText.trim(), '_MODEL2_');
+    assert.strictEqual(document.querySelector('#todo-list > :nth-child(3)').innerText.trim(), '_MODEL3_');
   });
 
-  test('updateElementCount displays todos count', function() {
+  QUnit.test('updateElementCount displays todos count', function(assert) {
     model.create('_MODEL1_');
     model.read(function (data) { view.render('updateElementCount', data.length); });
-    QUnit.assert.strictEqual(document.querySelector('#todo-count').innerText.trim(), '1 item left');
+    assert.strictEqual(document.querySelector('#todo-count').innerText.trim(), '1 item left');
 
     model.create('_MODEL2_');
     model.create('_MODEL3_');
     model.read(function (data) { view.render('updateElementCount', data.length); });
-    QUnit.assert.strictEqual(document.querySelector('#todo-count').innerText.trim(), '3 items left');
+    assert.strictEqual(document.querySelector('#todo-count').innerText.trim(), '3 items left');
   });
 
-})();
+})(window.QUnit);
