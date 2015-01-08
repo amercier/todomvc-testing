@@ -12,7 +12,6 @@ var config = {
     'PhantomJS'
   ],
   css_files: [
-    'test.css'
   ],
   _lib_files: globby.sync([
   ]),
