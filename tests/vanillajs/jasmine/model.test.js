@@ -1,4 +1,4 @@
-(function() {
+(function(describe, it, expect) {
   'use strict';
 
   describe('Model', function() {
@@ -74,4 +74,8 @@
 
   });
 
-})();
+})(
+  jasmine.getGlobal().describe,
+  jasmine.getGlobal().it,
+  jasmine.getGlobal().expect
+);

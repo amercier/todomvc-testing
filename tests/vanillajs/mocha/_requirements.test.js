@@ -1,35 +1,39 @@
 /* global _someRandomVar:true */
 /* jshint strict:false */
-(function() {
+(function(describe, it, expect) {
 
   var _window = this;
 
   describe('Requirements', function() {
 
     it('Should run in a browser', function() {
-      assert.equal(typeof window, 'object');
+      expect(window).to.be.an('object');
     });
 
     it('Should run within the window context', function() {
-      assert.equal(window, _window);
-      assert.ok(window === _window);
+      expect(window).to.deep.equal(_window);
+      expect(window === _window).to.be.true;
     });
 
     it('Should assign global variables to the window object', function() {
       var VALUE = '_VALUE_' + Math.random() + '_' + new Date().getTime();
       _someRandomVar = VALUE;
-      assert.equal(_someRandomVar, VALUE);
-      assert.ok(window._someRandomVar === _someRandomVar);
+      expect(_someRandomVar).to.equal(VALUE);
+      expect(window._someRandomVar === _someRandomVar).to.be.true;
     });
 
     it('Should have access to the DOM', function() {
-      assert.equal(typeof document, 'object');
-      assert.equal(Object.prototype.toString.apply(document), '[object HTMLDocument]');
+      expect(document).to.be.an('object');
+      expect(Object.prototype.toString.apply(document)).to.equal('[object HTMLDocument]');
 
       var element = document.createElement('p');
-      assert.equal(element.tagName, 'P');
+      expect(element.tagName).to.equal('P');
     });
 
   });
 
-})();
+})(
+  window.describe,
+  window.it,
+  chai.expect
+);

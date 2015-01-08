@@ -1,29 +1,29 @@
-(function() {
+(function(QUnit) {
   'use strict';
 
   QUnit.module('Model');
 
-  test('It should add a Model function to the global app object', function() {
-    QUnit.assert.ok(!!app);
-    QUnit.assert.equal(typeof app, 'object');
-    QUnit.assert.ok(!!app.Model);
-    QUnit.assert.equal(typeof app.Model, 'function');
+  QUnit.test('It should add a Model function to the global app object', function(assert) {
+    assert.ok(!!app);
+    assert.equal(typeof app, 'object');
+    assert.ok(!!app.Model);
+    assert.equal(typeof app.Model, 'function');
   });
 
-  test('It should create a new instance of Model', function() {
+  QUnit.test('It should create a new instance of Model', function(assert) {
     var model = new app.Model();
-    QUnit.assert.ok(model instanceof app.Model);
+    assert.ok(model instanceof app.Model);
   });
 
-  test('It should create a new todo', function () {
+  QUnit.test('It should create a new todo', function(assert) {
     var store = new mocks.Store('_STORE_');
     var model = new app.Model(store);
-    QUnit.assert.equal(store._data.todos.length, 0);
+    assert.equal(store._data.todos.length, 0);
     model.create('_MODEL1_');
-    QUnit.assert.equal(store._data.todos.length, 1);
-    QUnit.assert.equal(store._data.todos[0].title, '_MODEL1_');
-    QUnit.assert.equal(store._data.todos[0].completed, false);
-    QUnit.assert.equal(typeof store._data.todos[0].id, 'number');
+    assert.equal(store._data.todos.length, 1);
+    assert.equal(store._data.todos[0].title, '_MODEL1_');
+    assert.equal(store._data.todos[0].completed, false);
+    assert.equal(typeof store._data.todos[0].id, 'number');
   });
 
   // read
@@ -34,42 +34,42 @@
     model.create('_MODEL1_');
     model.create('_MODEL2_');
 
-    test('It should read all todos', function() {
+    QUnit.test('It should read all todos', function(assert) {
       model.read(function (data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 3);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 3);
       });
     });
 
-    test('It should read all todos matching a given id', function() {
+    QUnit.test('It should read all todos matching a given id', function(assert) {
       model.read(Number(store._data.todos[0].id), function(data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 1);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 1);
       });
       model.read(store._data.todos[0].id.toString(), function(data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 1);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 1);
       });
     });
 
-    test('It should read all todos matching a given filter', function() {
+    QUnit.test('It should read all todos matching a given filter', function(assert) {
       model.read({}, function (data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 3);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 3);
       });
       model.read({ id: store._data.todos[0].id }, function(data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 1);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 1);
       });
       model.read({ title: '_MODEL1_' }, function(data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 2);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 2);
       });
       model.read({ id: store._data.todos[0].id, title: '_MODEL1_' }, function(data) {
-        QUnit.assert.equal(Object.prototype.toString.apply(data), '[object Array]');
-        QUnit.assert.equal(data.length, 1);
+        assert.equal(Object.prototype.toString.apply(data), '[object Array]');
+        assert.equal(data.length, 1);
       });
     });
   })();
 
-})();
+})(window.QUnit);

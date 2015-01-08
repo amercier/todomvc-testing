@@ -1,4 +1,4 @@
-(function() {
+(function(describe, it, expect) {
   'use strict';
 
   var foo1 = false, foo2 = false, nestedFoo = false;
@@ -76,4 +76,8 @@
 
   });
 
-})();
+})(
+  jasmine.getGlobal().describe,
+  jasmine.getGlobal().it,
+  jasmine.getGlobal().expect
+);

@@ -2,6 +2,7 @@
   "extends": "../../../.jshintrc",
   "mocha": true,
   "globals": {
-    "assert": true
-  }
+    "chai": true
+  },
+  "expr": true
 }

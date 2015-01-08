@@ -1,6 +1,6 @@
 /* global _someRandomVar:true */
 /* jshint strict:false */
-(function() {
+(function(describe, it, expect) {
 
   var _window = this;
 
@@ -32,4 +32,8 @@
 
   });
 
-})();
+})(
+  jasmine.getGlobal().describe,
+  jasmine.getGlobal().it,
+  jasmine.getGlobal().expect
+);
