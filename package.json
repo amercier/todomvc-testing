@@ -26,6 +26,8 @@
     "karma-watch-vanillajs-mocha": "./node_modules/karma/bin/karma start tests/vanillajs/mocha/karma.conf.js --no-single-run --auto-watch",
     "karma-watch-vanillajs-qunit": "./node_modules/karma/bin/karma start tests/vanillajs/qunit/karma.conf.js --no-single-run --auto-watch"
   },
+  "depdencies": {
+  },
   "devDependencies": {
     "bower": "^1.3.12",
     "globby": "^1.0.0",

@@ -2,6 +2,8 @@ todomvc-testing
 ===============
 
 [![Build Status](http://img.shields.io/travis/amercier/todomvc-testing/master.svg?style=flat-square)](https://travis-ci.org/amercier/todomvc-testing/builds)
+[![Dependencies](https://img.shields.io/david/amercier/todomvc-testing.svg?style=flat-square)](https://david-dm.org/amercier/todomvc-testing#info=dependencies&view=table)
+[![DevDependencies](https://img.shields.io/david/dev/amercier/todomvc-testing.svg?style=flat-square)](https://david-dm.org/amercier/todomvc-testing#info=devDependencies&view=table)
 
 Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.com/) as an example:
 
