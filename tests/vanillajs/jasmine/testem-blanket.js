@@ -1,29 +1,31 @@
 /*jshint browser:false, node:true */
 /*jshint camelcase: false */
-var globby = require('globby');
+// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+var globby = require("globby"),
+  config;
 
-var config = {
-  framework: 'jasmine',
-  test_page: 'tests/vanillajs/jasmine/index.mustache?coverage',
+config = {
+  framework: "jasmine",
+  test_page: "tests/vanillajs/jasmine/index.mustache?coverage",
   launch_in_ci: [
-    'PhantomJS'
+    "PhantomJS"
   ],
   launch_in_dev: [
-    'PhantomJS'
+    "PhantomJS"
   ],
   css_files: [
   ],
   _lib_files: globby.sync([
-    'bower_components/blanket/dist/qunit/blanket.js',
-    'bower_components/blanket/src/adapters/jasmine-2.x-blanket.js'
+    "bower_components/blanket/dist/qunit/blanket.js",
+    "bower_components/blanket/src/adapters/jasmine-2.x-blanket.js"
   ]),
   _src_files: globby.sync([
-    'app/examples/vanillajs/js/*.js',
-    '!app/examples/vanillajs/js/app.js'
+    "app/examples/vanillajs/js/*.js",
+    "!app/examples/vanillajs/js/app.js"
   ]),
   _test_files: globby.sync([
-    'tests/vanillajs/mocks/*.mock.js',
-    'tests/vanillajs/jasmine/*.test.js'
+    "tests/vanillajs/mocks/*.mock.js",
+    "tests/vanillajs/jasmine/*.test.js"
   ])
 };
 

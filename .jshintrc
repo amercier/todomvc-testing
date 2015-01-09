@@ -2,7 +2,7 @@
   "maxerr": 50,
 
   "indent": 2,
-  "quotmark": "single",
+  "quotmark": "double",
 
   "bitwise": true,
   "camelcase": true,

@@ -1,6 +1,7 @@
 language: node_js
 env:
   - TEST_SUITE=jshint
+  - TEST_SUITE=jsrc
   - TEST_SUITE=testem-test-vanillajs-jasmine
   - TEST_SUITE=testem-test-vanillajs-jasmine-blanket
   - TEST_SUITE=testem-test-vanillajs-mocha
