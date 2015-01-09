@@ -59,6 +59,7 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
       ✓ Vanilla JS  
     </td>
   </tr>
+  <tr>
     <td>Blanket</td>
     <td>
       ✓ Vanilla JS  
