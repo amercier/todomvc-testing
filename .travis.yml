@@ -9,6 +9,7 @@ env:
     - GH_REF=github.com/amercier/todomvc-testing.git
     - secure: "dhWCWtsgluAaAueGeytyrAIfc4XpOeHEUuGr1r0+UHIhKocSXzLg0lq8u1blqJYBqK29cLzZOPFkZ+CDbhQlyDouK1DIk5tYvx52LhS4fGZxaCf0AxOFt4Hz6EWE5XeLGYG9+NfbOwb1xHJEvGERaWDq6Fja60ir2T0y28Vaa88="
   matrix:
+    - TEST_SUITE=test
     - TEST_SUITE=lint-jshint
     - TEST_SUITE=lint-jsrc
     - TEST_SUITE=testem-test-vanillajs-jasmine
@@ -20,9 +21,8 @@ env:
     - TEST_SUITE=karma-test-vanillajs-jasmine
     - TEST_SUITE=karma-test-vanillajs-mocha
     - TEST_SUITE=karma-test-vanillajs-qunit
-    - TEST_SUITE=test
 script: npm run $TEST_SUITE
-after_script:
-  - mkdir dist
-  - echo ok > dist/index.html
-  - npm run-script deploy
+after_success:
+  - test $TEST_SUITE == test && mkdir dist
+  - test $TEST_SUITE == test && echo ok > dist/index.html
+  - test $TEST_SUITE == test && npm run-script deploy
