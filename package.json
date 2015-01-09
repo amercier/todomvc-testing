@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "install": "bower install",
-    "deploy": "./deploy.sh",
+    "deploy": "./deploy.sh dist",
     "lint": "npm run lint-jshint && npm run lint-jscs",
     "lint-jshint": "jshint  --reporter node_modules/jshint-stylish/stylish.js .",
     "lint-jscs": "jscs tests",
