@@ -23,5 +23,5 @@ env:
     - TEST_SUITE=karma-test-vanillajs-qunit
 script: npm run $TEST_SUITE
 after_success:
-  - $TRAVIS_BRANCH == master && test $TEST_SUITE == test && npm run build
-  - $TRAVIS_BRANCH == master && test $TEST_SUITE == test && npm run deploy
+  - test $TRAVIS_BRANCH == master && test $TEST_SUITE == test && npm run build
+  - test $TRAVIS_BRANCH == master && test $TEST_SUITE == test && npm run deploy
