@@ -19,6 +19,7 @@ for path in \
   tests/config \
   tests/vanillajs/*/*.{test,mock}.js \
   bower_components/chai/chai.js \
+  bower_components/jasmine/lib/jasmine-core/{jasmine.{css,js},jasmine-html.js,boot.js} \
   bower_components/mocha/mocha.{css,js} \
   bower_components/qunit/qunit/qunit.{css,js} \
   bower_components/qunit-notifications/index.js \
@@ -37,10 +38,8 @@ done && echo OK
 # Generate Testem HTML files
 find tests -type f -name "testem*.js" | while read config; do
   dir=$(dirname "$config")
-  json="<(node -e \"console.log(JSON.stringify(require('./$config')));\")"
-  html="$1/$dir/index.html"
 
   echo -n "Generating $html... " \
-  && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars "$json" > "$html" \
+  && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars <(node -e "console.log(JSON.stringify(require('./$config')));") > "$1/$dir/index.html" \
   && echo OK
 done
