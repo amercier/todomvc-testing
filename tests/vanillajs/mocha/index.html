@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Mocha Javascript Tests</title>
+    <link rel="stylesheet" href="../../../bower_components/mocha/mocha.css"/>
+    
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="mocha-fixture"></div>
+
+    <!-- Mocha dependencies -->
+    <script src="../../../bower_components/mocha/mocha.js"></script>
+    <script src="../../../bower_components/chai/chai.js"></script>
+    <script>
+      mocha.setup({
+        ui: 'bdd'
+      });
+    </script>
+    
+
+    <!-- Source -->
+    
+      <script src="../../../app/examples/vanillajs/js/controller.js" data-cover></script>
+    
+      <script src="../../../app/examples/vanillajs/js/helpers.js" data-cover></script>
+    
+      <script src="../../../app/examples/vanillajs/js/model.js" data-cover></script>
+    
+      <script src="../../../app/examples/vanillajs/js/store.js" data-cover></script>
+    
+      <script src="../../../app/examples/vanillajs/js/template.js" data-cover></script>
+    
+      <script src="../../../app/examples/vanillajs/js/view.js" data-cover></script>
+    
+
+    <!-- Tests -->
+    
+      <script src="../../../tests/vanillajs/mocks/store.mock.js"></script>
+    
+      <script src="../../../tests/vanillajs/mocha/_requirements.test.js"></script>
+    
+      <script src="../../../tests/vanillajs/mocha/async.test.js"></script>
+    
+      <script src="../../../tests/vanillajs/mocha/model.test.js"></script>
+    
+      <script src="../../../tests/vanillajs/mocha/view.test.js"></script>
+    
+
+
+    <!-- Start Mocha -->
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
