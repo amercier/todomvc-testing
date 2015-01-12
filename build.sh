@@ -18,6 +18,7 @@ for path in \
   app/examples/vanillajs/js \
   tests/config \
   tests/vanillajs/*/*.{test,mock}.js \
+  tests/vanillajs/*/coverage/html \
   bower_components/blanket/dist/qunit/blanket.js \
   bower_components/blanket/src/adapters/{mocha,jasmine-2.x}-blanket.js \
   bower_components/chai/chai.js \

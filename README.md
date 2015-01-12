@@ -87,9 +87,9 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
 See it in action
 ----------------
 
-- **Jasmine:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index-blanket.html)
-- **Mocha:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index-blanket.html)
-- **QUnit:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index-blanket.html)
+- **Jasmine:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index.html), [demo with Blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index-blanket.html), [Istanbul coverage report](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/coverage/html/index.html)
+- **Mocha:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index.html), [demo with Blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index-blanket.html), [Istanbul coverage report](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/coverage/html/index.html)
+- **QUnit:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index.html), [demo with Blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index-blanket.html), [Istanbul coverage report](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/coverage/html/index.html)
 
 
 Installation
