@@ -46,3 +46,5 @@ find tests -type f -name "testem*.js" | while read config; do
   && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars <(node -e "console.log(JSON.stringify(require('./$config')));") > "$html" \
   && echo OK
 done
+
+echo " " > "$1/.nojekyll"
