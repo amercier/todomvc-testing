@@ -40,7 +40,7 @@ done && echo OK
 # Generate Testem HTML files
 find tests -type f -name "testem*.js" | while read config; do
   dir=$(dirname "$config")
-  html="$1/$dir/$(basename -s .js $config | sed 's/testem/index/').html"
+  html="$1/$dir/$(basename $config .js | sed 's/testem/index/').html"
 
   echo -n "Generating $html... " \
   && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars <(node -e "console.log(JSON.stringify(require('./$config')));") > "$html" \
