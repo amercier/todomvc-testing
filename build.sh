@@ -38,8 +38,9 @@ done && echo OK
 # Generate Testem HTML files
 find tests -type f -name "testem*.js" | while read config; do
   dir=$(dirname "$config")
+  html="$1/$dir/index.html"
 
   echo -n "Generating $html... " \
-  && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars <(node -e "console.log(JSON.stringify(require('./$config')));") > "$1/$dir/index.html" \
+  && cat "$dir/index.mustache" | grep -v '/testem.js' | handlebars <(node -e "console.log(JSON.stringify(require('./$config')));") > "$html" \
   && echo OK
 done
