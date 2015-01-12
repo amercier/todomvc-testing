@@ -84,6 +84,14 @@ Shows examples of Javascript automated testing using [TodoMVC](http://todomvc.co
 </table>
 
 
+See it in action
+----------------
+
+- **Jasmine:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/jasmine/index-blanket.html)
+- **Mocha:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/mocha/index-blanket.html)
+- **QUnit:** [demo](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index.html), [demo with blanket](http://amercier.github.io/todomvc-testing/tests/vanillajs/qunit/index-blanket.html)
+
+
 Installation
 ------------
 
