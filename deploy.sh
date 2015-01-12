@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -ne 1 ]; then echo "Syntax: $0 DIR" 2>&1; exit 1; fi
 if [ ! -e "$1" ]; then echo "Directory \"$1\" does not exist" 2>&1; exit 1; fi
